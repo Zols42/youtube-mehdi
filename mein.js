@@ -1,22 +1,23 @@
 
 let isClicked = false;
 
-let bouton = document.getElementById('btn');
+let btn = document.getElementById('btn');
 
 let body = document.querySelector("body");
 
-bouton.addEventListener('click',function() {
+btn.addEventListener('click',function() {
 if (isClicked == false) {
     isClicked = true;
-
+btn.classList.replace("btn-dark", "btn-light");
+btn.innerHTML = 'Light';
 body.style.backgroundColor = "black";
 }
 
-
 else {
-
     isClicked = false;
     body.style.backgroundColor = "white";
+    btn.classList.replace("btn-light", "btn-dark");
+    btn.innerHTML = 'Dark';
 }
 })
 
